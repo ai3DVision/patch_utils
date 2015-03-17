@@ -18,14 +18,15 @@ patch_module = Extension(
 )
 
 setup(
-    name="Patch utils",
+    name="patch_utils",
     version="0.1",
     description="Fast extraction of patches in n-dimensional images",
     author="Pablo Márquez Neila",
     author_email="pablo.marquezneila@epfl.ch",
     package_dir={'patch_utils': ''},
     packages=[
-        'patch_utils'
+        "patch_utils",
+        "patch_utils.scripts"
     ],
     ext_modules=cythonize([patch_module]),
     requires=['numpy', 'Cython']
